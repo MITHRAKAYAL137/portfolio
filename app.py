@@ -1,17 +1,13 @@
 import streamlit as st
 import os
 
-# -------------------------
-# PAGE CONFIG
-# -------------------------
+
 st.set_page_config(
     page_title="Mithrakayal M Portfolio",
     layout="wide"
 )
 
-# -------------------------
-# SIDEBAR
-# -------------------------
+
 with st.sidebar:
     st.title("Mithrakayal M")
     st.write("🚀 Python Developer | Aspiring Data Scientist | ML Engineer")
@@ -24,23 +20,20 @@ with st.sidebar:
 [GitHub](https://github.com/MITHRAKAYAL137)
 """)
 
-# -------------------------
+
 # NAVIGATION
-# -------------------------
 page = st.sidebar.radio(
     "Navigation",
     ["About", "Experience", "Skills", "Projects", "Achievements", "Resume"]
 )
 
-# -------------------------
+
 # HEADER
-# -------------------------
 st.markdown("<h1 style='text-align:center;'>🚀 Mithrakayal M Portfolio</h1>", unsafe_allow_html=True)
 st.divider()
 
-# -------------------------
+
 # ABOUT
-# -------------------------
 if page == "About":
     st.subheader("About Me")
     st.write("""
@@ -56,9 +49,8 @@ Skilled in Python, OpenCV, NumPy, SQL, and API integration. Experienced in dashb
     col2.metric("Projects", "5+")
     col3.metric("Technologies", "10+")
 
-# -------------------------
+
 # EXPERIENCE
-# -------------------------
 elif page == "Experience":
     st.subheader("💼 Professional Experience")
     st.markdown("**Python Developer – Infiniti Automation, Coimbatore**  | June 2023 – Present")
@@ -85,9 +77,8 @@ elif page == "Experience":
 - Optimized performance and reliability through efficient backend design
 """)
 
-# -------------------------
+
 # SKILLS (Category Cards)
-# -------------------------
 elif page == "Skills":
     st.subheader("🛠 Skills by Category")
     skill_categories = {
@@ -123,9 +114,8 @@ elif page == "Skills":
             )
         i += 1
 
-# -------------------------
+
 # PROJECTS
-# -------------------------
 elif page == "Projects":
 
     st.title("🚀 Featured Projects")
@@ -193,9 +183,8 @@ elif page == "Projects":
             col3.warning(f"Video not found: {video_file}")
 
         st.divider()
-# -------------------------
+
 # KEY ACHIEVEMENTS
-# -------------------------
 elif page == "Achievements":
     st.subheader("🏆 Key Achievements")
     achievements = [
@@ -219,9 +208,8 @@ elif page == "Achievements":
             unsafe_allow_html=True
         )
 
-# -------------------------
+
 # RESUME
-# -------------------------
 elif page == "Resume":
     st.subheader("📄 Resume")
     file_path = os.path.join(os.getcwd(), "MITHRAKAYAL_M_Resume.pdf")
@@ -236,9 +224,8 @@ elif page == "Resume":
         st.error("❌ Resume file not found")
         st.write("📂 Available files:", os.listdir())
 
-# -------------------------
+
 # FOOTER
-# -------------------------
 st.divider()
 st.markdown("<p style='text-align:center;'>© 2026 Mithrakayal M</p>", unsafe_allow_html=True)
 
