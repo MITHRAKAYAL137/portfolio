@@ -7,7 +7,6 @@ st.set_page_config(
     layout="wide"
 )
 
-
 with st.sidebar:
     st.title("Mithrakayal M")
     st.write("🚀 Python Developer | Aspiring Data Scientist | ML Engineer")
